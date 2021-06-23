@@ -1,0 +1,7 @@
+.DS_Store
+
+build/
+
+.cache/
+compile_commands.json
+*.rdbg
