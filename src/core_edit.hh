@@ -7,7 +7,7 @@
 //
 
 inline struct EditState {
-  Prop(bool, enabled) { true };
+  Prop(bool, enabled) { false };
   Prop(char[16], mode) { "select" };
 
   Prop(rl::Camera2D, camera) { {

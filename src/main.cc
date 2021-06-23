@@ -5,9 +5,9 @@
 // Run a single frame of the main loop
 void frame() {
   // Window size
-  Vec2 windowSize { float(rl::GetScreenWidth()), float(rl::GetScreenHeight()) };
   {
 #ifdef __EMSCRIPTEN__
+    Vec2 windowSize { float(rl::GetScreenWidth()), float(rl::GetScreenHeight()) };
     Vec2 canvasSize {
       float(int(EM_ASM_DOUBLE({
         return window.devicePixelRatio
@@ -50,29 +50,15 @@ void frame() {
   // Debug display
   clearDebugDisplay();
 
-  // UI
-  uiEdit();
-
   // Update
-  if (edit.enabled()) {
-    updateEdit();
-  } else {
-    updateGame(std::min(rl::GetFrameTime(), 0.06f));
-  }
+  updateGame(std::min(rl::GetFrameTime(), 0.06f));
 
   // Draw
   rl::BeginDrawing();
   {
-    rl::ClearBackground({ 0xcc, 0xe4, 0xf5, 0xff });
+    rl::ClearBackground({ 0x30, 0x30, 0x30, 0xff });
 
-    game.camera().offset = 0.5 * windowSize;
-    game.camera().zoom = float(windowSize.x) / 800;
-    rl::BeginMode2D(edit.enabled() ? edit.camera() : game.camera());
     drawGame();
-    if (edit.enabled()) {
-      drawEdit();
-    }
-    rl::EndMode2D();
 
     rl::DrawText(debugDisplayBuffer, 10, 10, 24, rl::BLACK);
   }
