@@ -253,6 +253,13 @@ inline const char *stringify(cJSON *jsn, bool formatted = false) {
   return buf;
 }
 
+inline const char *stringify(auto &val, bool formatted = false) {
+  auto jsn = write(val);
+  auto result = stringify(jsn, formatted);
+  cJSON_Delete(jsn);
+  return result;
+}
+
 
 //
 // Scene
