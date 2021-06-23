@@ -77,9 +77,6 @@ void frame() {
     rl::DrawText(debugDisplayBuffer, 10, 10, 24, rl::BLACK);
   }
   rl::EndDrawing();
-
-  // Flush console
-  std::fflush(stdout);
 }
 
 
