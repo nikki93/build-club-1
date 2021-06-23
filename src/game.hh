@@ -7,7 +7,6 @@
 //
 
 
-
 //
 // State
 //
@@ -23,11 +22,9 @@ inline struct GameState {
 } game;
 
 
-
 //
 // Components
 //
-
 
 
 //
