@@ -64,7 +64,7 @@ inline void cprint(const char *msg) {
 // Debug display
 //
 
-inline char debugDisplayBuffer[1024];
+inline char debugDisplayBuffer[1024] = "";
 inline char *debugDisplayCursor = debugDisplayBuffer;
 
 inline void clearDebugDisplay() {

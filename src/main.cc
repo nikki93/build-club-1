@@ -47,9 +47,6 @@ void frame() {
 #endif
   }
 
-  // Debug display
-  clearDebugDisplay();
-
   // Update
   updateGame(std::min(rl::GetFrameTime(), 0.06f));
 
@@ -61,6 +58,7 @@ void frame() {
     drawGame();
 
     rl::DrawText(debugDisplayBuffer, 10, 10, 48, rl::WHITE);
+    clearDebugDisplay();
   }
   rl::EndDrawing();
 }
