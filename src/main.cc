@@ -60,7 +60,7 @@ void frame() {
 
     drawGame();
 
-    rl::DrawText(debugDisplayBuffer, 10, 10, 24, rl::BLACK);
+    rl::DrawText(debugDisplayBuffer, 10, 10, 48, rl::WHITE);
   }
   rl::EndDrawing();
 }
