@@ -133,6 +133,7 @@ void updateEdit() {
   }
 
   // Game hook
+  void updateGameEdit();
   updateGameEdit();
 }
 
@@ -188,5 +189,6 @@ void drawEdit() {
   }
 
   // Game hook
+  void drawGameEdit();
   drawGameEdit();
 }

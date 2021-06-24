@@ -27,7 +27,3 @@ inline struct GameState {
 void initGame();
 void updateGame(float dt);
 void drawGame();
-void uiGame();
-
-void updateGameEdit();
-void drawGameEdit();

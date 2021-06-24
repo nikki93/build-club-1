@@ -9,6 +9,3 @@ void updateGame(float dt) {
 
 void drawGame() {
 }
-
-void uiGame() {
-}
